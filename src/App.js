@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Searchbar from './components/Searchbar';
 function App() {
   return (
     <>
-    
-    <h1>Hello World!!</h1>
 
+    <h1>Group 2 Elite Team</h1>
+  <Searchbar />
     </>
   );
 }
