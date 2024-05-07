@@ -1,39 +1,43 @@
 import React, { useState } from 'react';
-import { FaSearch, FaTimes } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
+import './style.css';
 
-const SearchBar = ({ handleSearch }) => {
-  const [query, setQuery] = useState('');
+const Searchbar = () => {
+  const [input, setInput] = useState("");
+  const fetchData = (value) => {
+    fetch("")
+    .then((response) => response.json())
+    .then((json) => {
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-    handleSearch(e.target.value);
-  };
+      const results = json.filter((user) => {
+        return (
+        value &&
+         user && 
+         user.name && user.name.tolowerCase().includes(value)
+        );
+      })
+      console.log(results);
+    });
+  }             
 
-  const clearSearch = () => {
-    setQuery('');
-    handleSearch('');
-  };
+const handleChange = (value) => {
+  setInput(value);
+  fetchData(value);
 
-  return (
-    <div className="search-bar-container">
-      <div className="search-icon">
-        <FaSearch />
-      </div>
-      <input
-        type="text"
-        placeholder="Search for a movie..."
-        value={query}
-        onChange={handleChange}
-        className="search-bar"
-      />
-      {query && (
-        <div className="clear-icon" onClick={clearSearch}>
-          <FaTimes />
-        </div>
-      )}
-    </div>
-  );
+
 };
+  return (
+    <div className='input-wrapper'>
+      <FaSearch className='search-icon' />
+      <input
+        type='text'
+        placeholder='Search movie here...'
+        value={input}
+        onChange={(e) => handleChange(e.target.value)}
+        className='search-input'
+      />
+    </div>
+  )
+}
 
-export default SearchBar;
-
+export default Searchbar;
