@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 import Searchbar from './components/Searchbar';
-import './components/searchbar.css';
-function App() {
+import './App.css';
+
+const App = () => {
+  const [searchResults, setSearchResults] = useState([]);
+
   return (
-    <>
-<div className='App'>
-  <div className='Searchbar'></div>
-  
-</div>
-    
-  <Searchbar />
-    </>
+    <div className="App">
+      <h1></h1>
+      <Searchbar setSearchResults={setSearchResults} />
+      {/* Display search results here */}
+    </div>
   );
-}
+};
 
 export default App;
