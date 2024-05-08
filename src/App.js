@@ -1,16 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Searchbar from './components/Searchbar/Searchbar';
-import './components/Searchbar/style.css';
+import MovieDetails from './components/MovieDetails';
+
+
 function App() {
   return (
     <>
 <div className='App'>
-  <div className='Searchbar'></div>
-  
+  <div className='MovieDeatails'></div>
+ 
 </div>
     
-  <Searchbar />
+  <MovieDetails />
+ 
     </>
   );
 }

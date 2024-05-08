@@ -6,7 +6,7 @@ function MovieDetails({ match }) {
 
   const getMovieDetails = async (id) => {
     try {
-      const response = await fetch(`'https://movies-api14.p.rapidapi.com/movies';/${id}`);
+      const response = await fetch(`https://api.example.com/movies/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch movie details');
       }
@@ -27,7 +27,7 @@ function MovieDetails({ match }) {
   }, [match]);
 
   return (
-    <div className="movie-details">
+    <div className="movie-container"> {/* Added container class */}
       {error && <p>Error fetching movie details: {error.message}</p>}
       {match && match.params ? ( // Display content only if match and params are available
         movie ? (
@@ -57,3 +57,4 @@ function MovieDetails({ match }) {
 }
 
 export default MovieDetails;
+
