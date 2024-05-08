@@ -1,7 +1,22 @@
-import React from 'react'
-import Logo from './ELIITE.png'
+import React, { useState } from 'react'
+import './homepage.css'
+//import Genres from './genres'
+import Logo from '/home/eric/development/code/se-prep/phase-2/group-project/elite-2.2-movie-website/src/assets/ELITE.png'
 
-function homepage() {
+function Homepage() {
+  const [showList, setShowList] = useState(false);
+  
+
+
+
+  const handleMouseEnter = () => {
+    setShowList(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowList(false);
+  };
+  
   return (
     <div className='homepage-container'>
         <div className='logo'>
@@ -18,12 +33,19 @@ function homepage() {
           <a href="" className="btn">
             Top Rated
           </a>
-          <a href="#" className="btn">
+          <a href="#" className="btn"
+                 onMouseEnter={handleMouseEnter} 
+                 onMouseLeave={handleMouseLeave}>
             Genre
           </a>
+          {showList && (
+        <ul className='genres'>
+          
+        </ul>
+      )}
 
             <div className='search-bar'>
-               ( /** ammend search bar component */)
+               
 
             </div>
 
@@ -41,4 +63,4 @@ function homepage() {
   )
 }
 
-export default homepage
+export default Homepage
