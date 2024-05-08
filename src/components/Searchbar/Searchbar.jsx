@@ -6,28 +6,28 @@ import axios from 'axios';
 const Searchbar = () => {
   const [input, setInput] = useState("");
 
-  const fetchData = async (searchQuery) => {
-    const url = 'https://movies-api14.p.rapidapi.com/movies';
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '8caa7f75c5msh318e0e9e57e1d1ap1a4ab4jsnb340659c48fc',
-        'X-RapidAPI-Host': 'movies-api14.p.rapidapi.com'
-      }
-    };
+  //const fetchData = async (searchQuery) => {
+    //const url = 'https://movies-api14.p.rapidapi.com/movies';
+    //const options = {
+    //  method: 'GET',
+     // headers: {
+     //   'X-RapidAPI-Key': '8caa7f75c5msh318e0e9e57e1d1ap1a4ab4jsnb340659c48fc',
+     //   'X-RapidAPI-Host': 'movies-api14.p.rapidapi.com'
+    //  }
+    //};
 
-    try {
-      const response = await axios(url, options);
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    //try {
+    //  const response = await axios(url, options);
+    //  console.log(response.data);
+  //  } catch (error) {
+   //   console.error(error);
+   // }
+ // };
 
-  const handleChange = (value) => {
-    setInput(value);
-    fetchData(value);
-  };
+  //const handleChange = (value) => {
+   // setInput(value);
+   // fetchData(value);
+ // };
 
   return (
     <div className='input-wrapper'>
@@ -36,7 +36,7 @@ const Searchbar = () => {
         type='text'
         placeholder='Search movie here...'
         value={input}
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={(e) => setInput(e.target.value)}
         className='search-input'
       />
     </div>
