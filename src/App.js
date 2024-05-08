@@ -1,16 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Searchbar from './components/Searchbar/Searchbar';
-import './components/Searchbar/style.css';
+import ContactUs from './components/ContactUs/ContactUs';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 function App() {
   return (
     <>
-<div className='App'>
-  <div className='Searchbar'></div>
-  
-</div>
     
-  <Searchbar />
+   
+   <Router>
+       <ContactUs />
+   </Router>
+   
+
     </>
   );
 }
