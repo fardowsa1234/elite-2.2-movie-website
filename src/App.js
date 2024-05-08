@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Searchbar from './components/Searchbar/Searchbar';
-import './components/Searchbar/style.css';
+import Searchbar from './components/Searchbar';
+import './components/searchbar.css';
 function App() {
   return (
     <>
