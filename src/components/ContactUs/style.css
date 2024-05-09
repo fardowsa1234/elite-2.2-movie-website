@@ -1,0 +1,33 @@
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0px; 
+  width: 100%;
+  background-color: hsl(0, 1%, 61%);
+  color: #fff; 
+  padding: 0px; 
+
+}
+.footer-divs{
+  display: flex;
+  
+}
+
+.footer-section{
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  width:  20%;
+  
+}
+/* h3 {
+  display: block;
+} */
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
