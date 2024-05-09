@@ -1,0 +1,35 @@
+/* results.css */
+
+.results-container {
+    display: flex; /* Arrange results horizontally */
+    flex-wrap: wrap; /* Allow results to wrap to multiple lines */
+    margin: 20px auto; /* Add margin for better spacing */
+    width: 80%; /* Limit container width to 80% */
+  }
+  
+  .movie-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; /* Center text within cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    width: 25%; /* Set card width (adjust based on desired layout) */
+  }
+  
+  .movie-card img {
+    width: 100%; /* Make image fill the card width */
+    height: 200px; /* Set image height */
+    object-fit: cover; /* Crop image to fit within dimensions */
+  }
+  
+  .movie-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .movie-card p {
+    font-size: 14px;
+    line-height: 1.5; /* Adjust line spacing for readability */
+  }
+  
