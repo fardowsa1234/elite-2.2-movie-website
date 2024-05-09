@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  line-height: 1.7;
+}
+
+/* ============== GENERAL STYLES ================ */
+.homepage-container {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  background-color: #000;
+  flex-direction: column; /* Centers the div horizontally */
+  align-items: center; /* Centers the div vertically */
+  
+}
+a {
+  color: #00ced1;
+  text-decoration: none;
+  
+}
+
+a:hover {
+  color: #7fffd4;
+  transition: all 400ms ease;
+}
+.links a {
+    margin: 10px; /* Adds space between links */
+    /* Add other styles as needed */
+  }
+.genres {
+  
+  color: #C0C0C0;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  width: max-content;
+}
+.logo {
+  justify-content: center;
+  height: 400px;
+  top: 0;
+  
+}
