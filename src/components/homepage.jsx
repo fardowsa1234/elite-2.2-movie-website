@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './homepage.css'
 //import Genres from './genres'
-import Logo from '/home/eric/development/code/se-prep/phase-2/group-project/elite-2.2-movie-website/src/assets/ELITE.png'
+import Logo from "../assets/ELITE.png"; // add a symlink to it from project's node_modules/.
+
 
 function Homepage() {
   const [showList, setShowList] = useState(false);
