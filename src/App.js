@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Searchbar setSearchResults={setSearchResults} />
+      <Searchbar setSearchResults={setSearchResults} />
         {/* Display search results here */}
         <ContactUs /> {/* Include ContactUs component */}
         <MovieList /> {/* Include MovieList component */}
