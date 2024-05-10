@@ -35,7 +35,7 @@ const Searchbar = () => {
     };
     console.log('searchResults:', searchResults)
     return (
-        <div className='result-container'>
+        <div className='search-container'>
             <input
                 type="text"
                 placeholder="Enter movie or show title"
@@ -43,7 +43,9 @@ const Searchbar = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
 
-            <button onClick={handleSearch}>Search</button>
+            <button onClick={handleSearch} className='Search-icon'>
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt49wINxs1fpxM6aKdLgLF5qPVqIeFKPmcGv-aD2VWMQ&s' alt=' ' />
+            </button>
             {isLoading && <p>Loading...</p>}
             {/* Display search results */}
             <div>
