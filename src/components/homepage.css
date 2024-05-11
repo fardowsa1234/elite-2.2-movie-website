@@ -22,7 +22,7 @@ body {
   background-color: #000;
   flex-direction: column; /* Centers the div horizontally */
   align-items: center; /* Centers the div vertically */
-  
+  justify-content: center;
 }
 a {
   color: #00ced1;
