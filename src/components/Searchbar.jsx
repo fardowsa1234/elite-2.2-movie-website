@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
+import './searchbar.css'
 
-const API_KEY = '8caa7f75c5msh318e0e9e57e1d1ap1a4ab4jsnb340659c48fc';
+const Searchbar = ({ onSearch }) => {
+    const [searchTerm, setSearchTerm] = useState('');
 
-const Searchbar = ({ setSearchResults, searchTerm }) => {
-  const [userInput, setUserInput] = useState('');
+    const handleInputChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
 
-  const handleSearch = async () => {
-    if (!userInput) return;
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        onSearch(searchTerm);
+    };
 
-    const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${userInput}`);
-    const data = await response.json();
-    setSearchResults(data.results);
-    setUserInput('');
-  };
-
-  return (
-    <div className="search-bar">
-      <input
-        type="text"
-        placeholder="Search for movies"
-        value={userInput}
-        onChange={(e) => setUserInput(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
-    </div>
-  );
+    return (
+        <form className='search-form' onSubmit={handleSubmit}>
+            <input
+                className='search-input'
+                type="text"
+                placeholder="Search for a movie or series..."
+                value={searchTerm}
+                onChange={handleInputChange}
+            />
+              <button className='Search-icon'>
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt49wINxs1fpxM6aKdLgLF5qPVqIeFKPmcGv-aD2VWMQ&s' alt=' ' />
+            </button>
+        </form>
+    );
 };
 
 export default Searchbar;
