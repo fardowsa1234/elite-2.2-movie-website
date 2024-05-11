@@ -16,13 +16,11 @@ function App() {
     <Provider store={store}> // Wrap app with Redux provider
       <Router>
         <div className="App">
-          <Homepage/>
           <Routes> {/* Use Routes for cleaner path definitions */}
-            
+            <Route path='/' element= {<Homepage/>}/>
             <Route path="/movies" element={<MovieList />} /> {/* Movie listing route with search results prop */}
-            
+                     
           </Routes>
-          <Outlet/>
         </div>
       </Router>
     </Provider>
